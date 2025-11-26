@@ -85,7 +85,26 @@ def scrape_followers():
     with open(f"follower_page_source.html", "w", encoding="utf-8") as file:
         file.write(page_html)
 
-
+def scrape_following():
+    driver.get(f"https://www.instagram.com/{os.getenv("user_id")}/")
+    time.sleep(10)
+    user_details[2].click()
+    time.sleep(5)   
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "[class='x6nl9eh x1a5l9x9 x7vuprf x1mg3h75 x1lliihq x1iyjqo2 xs83m0k xz65tgg x1rife3k x1n2onr6']")))
+    scrollableElement = driver.find_element(By.CSS_SELECTOR, "[class='x6nl9eh x1a5l9x9 x7vuprf x1mg3h75 x1lliihq x1iyjqo2 xs83m0k xz65tgg x1rife3k x1n2onr6']")
+    initial_following_count = 0
+    while True:
+        for _ in range(3):
+            driver.execute_script('arguments[0].scrollBy(0,1000);', scrollableElement)
+            time.sleep(1)
+        print("Number of followings crawled:", count_following())
+        if int(initial_following_count) < count_following():
+            initial_following_count =  count_following()
+        else: 
+            break
+    page_html = driver.page_source
+    with open(f"following_page_source.html", "w", encoding="utf-8") as file:
+        file.write(page_html)
 
 time.sleep(10)
 driver.close()

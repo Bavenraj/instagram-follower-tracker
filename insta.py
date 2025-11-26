@@ -22,7 +22,9 @@ driver.maximize_window()
 
 driver.get("https://www.instagram.com/accounts/login/")
 time.sleep(3)
+#SOME INSTAGRAMS CHANGES THE LOGIN METHOD, SO WE CHECK WHICH METHOD IS AVAILABLE
 if WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.NAME, 'username'))):
+    #OLD INSTAGRAM LOGIN METHOD
     username_input = driver.find_element(by = By.NAME, value = "username")
     username_input.clear()
     username_input.send_keys(os.getenv("user_id"))
@@ -33,6 +35,7 @@ if WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.NAME, 'user
     login_button = driver.find_element(by=By.CSS_SELECTOR, value ="[type='submit']")
     login_button.click()
 else:
+    #NEW INSTAGRAM LOGIN METHOD
     username_input = driver.find_element(by = By.NAME, value = "email")
     username_input.clear()
     username_input.send_keys(os.getenv("user_id"))
@@ -41,7 +44,7 @@ else:
     password_input.send_keys(os.getenv("password"))
     time.sleep(2)
     login_button = driver.find_elements(by=By.CSS_SELECTOR, value ="[role='button']")
-    login_button[1].click()# New UI
+    login_button[1].click()
 
 time.sleep(10)
 driver.get(f"https://www.instagram.com/{os.getenv("user_id")}/")

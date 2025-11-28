@@ -4,7 +4,7 @@ from insta_scraper import Scraper
 from dotenv import load_dotenv
 
 load_dotenv()
-Crawler = Crawler(user_id= os.getenv("user_id"), password="your_password")
+Crawler = Crawler(user_id= os.getenv("user_id"), password= os.getenv("password"))
 
 Crawler.login()
 Crawler.scrape_followers()

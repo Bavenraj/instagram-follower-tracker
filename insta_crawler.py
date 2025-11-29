@@ -24,11 +24,11 @@ class Crawler:
         self.password = password    
 
     def login(self):
+        logging.info("Loading Instagram LOGIN Page")
         self.driver.get("https://www.instagram.com/accounts/login/")
         time.sleep(3)
-        #SOME INSTAGRAMS CHANGES THE LOGIN METHOD, SO WE CHECK WHICH METHOD IS AVAILABLE
         if WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.NAME, 'username'))):
-            #OLD INSTAGRAM LOGIN METHOD
+            logging.info("Using OLD Instagram LOGIN method")
             username_input = self.driver.find_element(by = By.NAME, value = "username")
             username_input.clear()
             username_input.send_keys(self.user_id)#os.getenv("user_id"))
@@ -39,7 +39,7 @@ class Crawler:
             login_button = self.driver.find_element(by=By.CSS_SELECTOR, value ="[type='submit']")
             login_button.click()
         else:
-            #NEW INSTAGRAM LOGIN METHOD
+            logging.info("Using NEW Instagram LOGIN method")
             username_input = self.driver.find_element(by = By.NAME, value = "email")
             username_input.clear()
             username_input.send_keys(self.user_id)#os.getenv("user_id"))
@@ -49,9 +49,7 @@ class Crawler:
             time.sleep(2)
             login_button = self.driver.find_elements(by=By.CSS_SELECTOR, value ="[role='button']")
             login_button[1].click()
-
-        time.sleep(10)
-        self.driver.get(f"https://www.instagram.com/{self.user_id}/")
+        logging.info("Logged in successfully")
         time.sleep(10)
 
     def get_user_details(self, follower_type):
@@ -77,7 +75,8 @@ class Crawler:
         following_count_crawled = self.driver.find_elements(by=By.CLASS_NAME, value = "x1qnrgzn")
         return len(following_count_crawled)
 
-    def scrape_followers(self):
+    def crawl_followers(self):
+        logging.info("Crawling Followers")
         self.driver.get(f"https://www.instagram.com/{self.user_id}/")
         time.sleep(10)
         self.get_user_details("followers").click()
@@ -89,16 +88,20 @@ class Crawler:
             for _ in range(3):
                 self.driver.execute_script('arguments[0].scrollBy(0,1000);', scrollableElement)
                 time.sleep(1)
-            print("Number of followers crawled:", self.count_followers())
+            logging.info(f"Number of followers crawled: {self.count_followers()}")
             if int(initial_follower_count) < self.count_followers():
                 initial_follower_count =  self.count_followers()
             else: 
+                logging.info(f"Completed crawling followers. Total followers crawled: {self.count_followers()}")
                 break
+        logging.info("Saving follower page source to HTML file")
         page_html = self.driver.page_source
         with open(f"follower_page_source.html", "w", encoding="utf-8") as file:
             file.write(page_html)
+        logging.info("Follower page source saved successfully")
 
-    def scrape_following(self):
+    def crawl_following(self):
+        logging.info("Crawling Following")
         self.driver.get(f"https://www.instagram.com/{self.user_id}/")
         time.sleep(10)
         self.get_user_details("following").click()
@@ -110,16 +113,22 @@ class Crawler:
             for _ in range(3):
                 self.driver.execute_script('arguments[0].scrollBy(0,1000);', scrollableElement)
                 time.sleep(1)
-            print("Number of followings crawled:", self.count_following())
+            logging.info(f"Number of followings crawled: {self.count_following()}")
             if int(initial_following_count) < self.count_following():
                 initial_following_count =  self.count_following()
             else: 
+                logging.info(f"Completed crawling followings. Total followings crawled: {self.count_following()}")
                 break
+        logging.info("Saving following page source to HTML file")
         page_html = self.driver.page_source
         with open(f"following_page_source.html", "w", encoding="utf-8") as file:
             file.write(page_html)
+        logging.info("Following page source saved successfully")
 
     def close(self):
+        logging.info("Closing WebDriver")
         time.sleep(10)
         self.driver.close()
         self.driver.quit()
+        logging.info("WebDriver closed successfully")
+        logging.info('--Web Crawling Completed--')

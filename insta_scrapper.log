@@ -1,0 +1,148 @@
+2025-11-29 14:05:26,002 - INFO - --Web Crawling--
+2025-11-29 14:05:26,002 - INFO - Initializing WebDriver
+2025-11-29 14:05:27,539 - INFO - Loading Instagram LOGIN Page
+2025-11-29 14:05:30,973 - INFO - Using OLD Instagram LOGIN method
+2025-11-29 14:05:33,236 - INFO - Logged in successfully
+2025-11-29 14:05:43,237 - INFO - Crawling Followers
+2025-11-29 14:06:35,046 - INFO - --Web Crawling--
+2025-11-29 14:06:35,047 - INFO - Initializing WebDriver
+2025-11-29 14:06:36,183 - INFO - Loading Instagram LOGIN Page
+2025-11-29 14:06:39,592 - INFO - Using OLD Instagram LOGIN method
+2025-11-29 14:06:41,856 - INFO - Logged in successfully
+2025-11-29 14:06:51,857 - INFO - Crawling Followers
+2025-11-29 14:07:15,906 - INFO - Number of followers crawled: 31
+2025-11-29 14:07:18,952 - INFO - Number of followers crawled: 53
+2025-11-29 14:07:21,999 - INFO - Number of followers crawled: 86
+2025-11-29 14:07:25,054 - INFO - Number of followers crawled: 121
+2025-11-29 14:07:28,116 - INFO - Number of followers crawled: 154
+2025-11-29 14:07:31,179 - INFO - Number of followers crawled: 187
+2025-11-29 14:07:34,243 - INFO - Number of followers crawled: 222
+2025-11-29 14:07:37,308 - INFO - Number of followers crawled: 235
+2025-11-29 14:07:40,372 - INFO - Number of followers crawled: 235
+2025-11-29 14:07:40,403 - INFO - Completed crawling followers. Total followers crawled: 235
+2025-11-29 14:07:40,403 - INFO - Saving follower page source to HTML file
+2025-11-29 14:07:40,614 - INFO - Follower page source saved successfully
+2025-11-29 14:07:40,614 - INFO - Crawling Following
+2025-11-29 14:08:04,460 - INFO - Number of followings crawled: 36
+2025-11-29 14:08:07,501 - INFO - Number of followings crawled: 48
+2025-11-29 14:08:10,547 - INFO - Number of followings crawled: 72
+2025-11-29 14:08:13,594 - INFO - Number of followings crawled: 84
+2025-11-29 14:08:16,643 - INFO - Number of followings crawled: 108
+2025-11-29 14:08:19,726 - INFO - Number of followings crawled: 132
+2025-11-29 14:08:22,799 - INFO - Number of followings crawled: 156
+2025-11-29 14:08:25,919 - INFO - Number of followings crawled: 180
+2025-11-29 14:08:29,021 - INFO - Number of followings crawled: 216
+2025-11-29 14:08:32,105 - INFO - Number of followings crawled: 240
+2025-11-29 14:08:35,227 - INFO - Number of followings crawled: 264
+2025-11-29 14:08:38,366 - INFO - Number of followings crawled: 288
+2025-11-29 14:08:41,441 - INFO - Number of followings crawled: 312
+2025-11-29 14:08:44,525 - INFO - Number of followings crawled: 336
+2025-11-29 14:08:47,600 - INFO - Number of followings crawled: 348
+2025-11-29 14:08:50,811 - INFO - Number of followings crawled: 384
+2025-11-29 14:08:53,895 - INFO - Number of followings crawled: 396
+2025-11-29 14:08:56,983 - INFO - Number of followings crawled: 420
+2025-11-29 14:09:00,157 - INFO - Number of followings crawled: 444
+2025-11-29 14:09:03,519 - INFO - Number of followings crawled: 468
+2025-11-29 14:09:07,053 - INFO - Number of followings crawled: 504
+2025-11-29 14:09:10,310 - INFO - Number of followings crawled: 540
+2025-11-29 14:09:13,497 - INFO - Number of followings crawled: 564
+2025-11-29 14:09:16,836 - INFO - Number of followings crawled: 588
+2025-11-29 14:09:20,465 - INFO - Number of followings crawled: 636
+2025-11-29 14:09:24,007 - INFO - Number of followings crawled: 672
+2025-11-29 14:09:27,555 - INFO - Number of followings crawled: 708
+2025-11-29 14:09:31,069 - INFO - Number of followings crawled: 739
+2025-11-29 14:09:34,286 - INFO - Number of followings crawled: 761
+2025-11-29 14:09:37,528 - INFO - Number of followings crawled: 778
+2025-11-29 14:09:40,941 - INFO - Number of followings crawled: 794
+2025-11-29 14:09:44,093 - INFO - Number of followings crawled: 794
+2025-11-29 14:09:44,170 - INFO - Completed crawling followings. Total followings crawled: 794
+2025-11-29 14:09:44,170 - INFO - Saving following page source to HTML file
+2025-11-29 14:09:44,553 - INFO - Following page source saved successfully
+2025-11-29 14:09:44,554 - INFO - Closing WebDriver
+2025-11-29 14:09:56,879 - INFO - WebDriver closed successfully
+2025-11-29 14:09:56,879 - INFO - --Web Crawling Completed--
+2025-11-29 14:09:56,879 - INFO - --Web Scraping--
+2025-11-29 14:09:56,879 - INFO - Extracting details and saving to Excel
+2025-11-29 14:09:56,879 - INFO - Identifying unfollowers
+2025-11-29 14:09:56,880 - INFO - Scraping user details from saved HTML files
+2025-11-29 14:09:56,880 - INFO - Scraping follower data
+2025-11-29 14:09:57,539 - INFO - Scraping following data
+2025-11-29 14:09:58,344 - INFO - User details scraped successfully
+2025-11-29 14:09:58,344 - INFO - Comparing following and follower lists
+2025-11-29 14:09:58,345 - INFO - Unfollowers identified successfully
+2025-11-29 14:09:58,345 - INFO - Users not following back: 65
+2025-11-29 14:09:58,346 - INFO - Identifying unfollowing users
+2025-11-29 14:09:58,346 - INFO - Scraping user details from saved HTML files
+2025-11-29 14:09:58,346 - INFO - Scraping follower data
+2025-11-29 14:09:58,897 - INFO - Scraping following data
+2025-11-29 14:09:59,821 - INFO - User details scraped successfully
+2025-11-29 14:09:59,821 - INFO - Comparing follower and following lists
+2025-11-29 14:09:59,822 - INFO - Unfollowing users identified successfully
+2025-11-29 14:09:59,822 - INFO - Users I am not following back: 4
+2025-11-29 14:09:59,822 - INFO - Identifying mutual followers
+2025-11-29 14:09:59,822 - INFO - Scraping user details from saved HTML files
+2025-11-29 14:09:59,822 - INFO - Scraping follower data
+2025-11-29 14:10:00,381 - INFO - Scraping following data
+2025-11-29 14:10:01,306 - INFO - User details scraped successfully
+2025-11-29 14:10:01,306 - INFO - Comparing follower and following lists
+2025-11-29 14:10:01,307 - INFO - Mutual followers identified successfully
+2025-11-29 14:10:01,307 - INFO - Number of mutual followers: 486
+2025-11-29 14:10:01,614 - INFO - Details extracted and saved to Excel successfully
+2025-11-29 14:14:41,958 - INFO - --Web Scraping--
+2025-11-29 14:14:41,958 - INFO - Extracting details and saving to Excel
+2025-11-29 14:14:41,958 - INFO - Identifying unfollowers
+2025-11-29 14:14:41,958 - INFO - Scraping user details from saved HTML files
+2025-11-29 14:14:41,958 - INFO - Scraping follower data
+2025-11-29 14:14:42,960 - INFO - Scraping following data
+2025-11-29 14:14:44,426 - INFO - User details scraped successfully
+2025-11-29 14:14:44,426 - INFO - Comparing following and follower lists
+2025-11-29 14:14:44,427 - INFO - Unfollowers identified successfully
+2025-11-29 14:14:44,427 - INFO - Users not following back: 581
+2025-11-29 14:14:44,427 - INFO - Identifying unfollowing users
+2025-11-29 14:14:44,427 - INFO - Scraping user details from saved HTML files
+2025-11-29 14:14:44,427 - INFO - Scraping follower data
+2025-11-29 14:14:44,853 - INFO - Scraping following data
+2025-11-29 14:14:46,462 - INFO - User details scraped successfully
+2025-11-29 14:14:46,463 - INFO - Comparing follower and following lists
+2025-11-29 14:14:46,463 - INFO - Unfollowing users identified successfully
+2025-11-29 14:14:46,464 - INFO - Users I am not following back: 22
+2025-11-29 14:14:46,464 - INFO - Identifying mutual followers
+2025-11-29 14:14:46,464 - INFO - Scraping user details from saved HTML files
+2025-11-29 14:14:46,464 - INFO - Scraping follower data
+2025-11-29 14:14:46,889 - INFO - Scraping following data
+2025-11-29 14:14:48,509 - INFO - User details scraped successfully
+2025-11-29 14:14:48,509 - INFO - Comparing follower and following lists
+2025-11-29 14:14:48,510 - INFO - Mutual followers identified successfully
+2025-11-29 14:14:48,510 - INFO - Number of mutual followers: 213
+2025-11-29 14:14:48,761 - INFO - Details extracted and saved to Excel successfully
+2025-11-29 14:46:23,226 - INFO - --Web Scraping--
+2025-11-29 14:46:23,226 - INFO - Extracting details and saving to Excel
+2025-11-29 14:46:23,226 - INFO - Scraping user details from saved HTML files
+2025-11-29 14:46:23,227 - INFO - Scraping follower data
+2025-11-29 14:46:23,657 - INFO - Scraping following data
+2025-11-29 14:46:25,119 - INFO - User details scraped successfully
+2025-11-29 14:46:25,120 - INFO - Identifying unfollowers
+2025-11-29 14:46:25,120 - INFO - Scraping user details from saved HTML files
+2025-11-29 14:46:25,120 - INFO - Scraping follower data
+2025-11-29 14:46:25,552 - INFO - Scraping following data
+2025-11-29 14:46:27,186 - INFO - User details scraped successfully
+2025-11-29 14:46:27,187 - INFO - Comparing following and follower lists
+2025-11-29 14:46:27,188 - INFO - Unfollowers identified successfully
+2025-11-29 14:46:27,188 - INFO - Users not following back: 581
+2025-11-29 14:46:27,188 - INFO - Identifying unfollowing users
+2025-11-29 14:46:27,188 - INFO - Scraping user details from saved HTML files
+2025-11-29 14:46:27,188 - INFO - Scraping follower data
+2025-11-29 14:46:27,617 - INFO - Scraping following data
+2025-11-29 14:46:29,250 - INFO - User details scraped successfully
+2025-11-29 14:46:29,250 - INFO - Comparing follower and following lists
+2025-11-29 14:46:29,251 - INFO - Unfollowing users identified successfully
+2025-11-29 14:46:29,251 - INFO - Users I am not following back: 22
+2025-11-29 14:46:29,251 - INFO - Identifying mutual followers
+2025-11-29 14:46:29,251 - INFO - Scraping user details from saved HTML files
+2025-11-29 14:46:29,251 - INFO - Scraping follower data
+2025-11-29 14:46:29,680 - INFO - Scraping following data
+2025-11-29 14:46:31,316 - INFO - User details scraped successfully
+2025-11-29 14:46:31,316 - INFO - Comparing follower and following lists
+2025-11-29 14:46:31,317 - INFO - Mutual followers identified successfully
+2025-11-29 14:46:31,317 - INFO - Number of mutual followers: 213
+2025-11-29 14:46:31,687 - INFO - Details extracted and saved to Excel successfully

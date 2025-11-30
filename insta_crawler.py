@@ -57,9 +57,9 @@ class Crawler:
         if follower_type not in ['followers', 'following']:
             raise ValueError("follower_type must be either 'followers' or 'following'")
         elif follower_type == 'followers':
-            clickable_element = user_details[1].text
+            clickable_element = user_details[1]
         else:
-            clickable_element = user_details[2].text
+            clickable_element = user_details[2]
         time.sleep(5)            
         post_count = user_details[0].text
         follower_count = user_details[1].text #incorrect value shown here
